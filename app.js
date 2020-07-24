@@ -12,6 +12,12 @@ mongoose.connection.once('open', () => {
     console.log('conneted to database');
 });
 
+
+app.get("/", (req, res) => {
+    console.log("received")
+    res.send({data: "OK"})
+})
+
 app.use('/graphql', graphqlHTTP({
     schema,
     graphiql: true
