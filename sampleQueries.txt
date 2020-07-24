@@ -1,0 +1,53 @@
+# query{
+#   categories{
+#     id
+#     name
+#     subcategories{
+#       id
+#       name
+#       reviews{
+#         id
+#         content
+#         subcategory{
+#           name
+#           category{
+#             name
+#           }
+#         }
+#       }
+#     }
+#   }
+# }
+
+
+# mutation{
+  # addSubcategory(name: "1.1", categoryId:"5f196e7f5a15df56c8008fbe"){
+  #   name
+  # }
+  # addSubcategory(name: "1.2", categoryId:"5f196e7f5a15df56c8008fbe"){
+  #   name
+  #   category{
+  #     name
+  #   }
+  # }
+  # addSubcategory(name: "2.1", categoryId:"5f196e8b5a15df56c8008fbf"){
+  #   name
+  #   category{
+  #     name
+  #   }
+  # }
+  # addSubcategory(name: "2.2", categoryId:"5f196e8b5a15df56c8008fbf"){
+  #   name
+  #       category{
+  #     name
+  #   }
+  # }
+# }
+
+
+# mutation{
+  # addReview(content:"1.1.1 rev", subcategoryId:"5f196fbb5a15df56c8008fc0"){id}
+  # addReview(content:"1.1.2 rev", subcategoryId:"5f196fbb5a15df56c8008fc0"){id}
+  # addReview(content:"1.2.1 rev", subcategoryId:"5f196fd55a15df56c8008fc1"){id}
+  # addReview(content:"1.2.2 rev", subcategoryId:"5f196fd55a15df56c8008fc1"){id}
+# }
